@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stock-quant-risk
+spec:
+  type: ClusterIP
+  selector:
+    app: stock-quant-risk
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

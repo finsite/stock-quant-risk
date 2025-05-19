@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-quant-risk
+  labels:
+    app: stock-quant-risk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-quant-risk
+  template:
+    metadata:
+      labels:
+        app: stock-quant-risk
+    spec:
+      containers:
+        - name: stock-quant-risk
+          image: stock-quant-risk:latest
+          ports:
+            - containerPort: 8080
