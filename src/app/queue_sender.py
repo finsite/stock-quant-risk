@@ -1,13 +1,13 @@
-"""Module to publish processed analysis data to RabbitMQ or AWS SQS.
-"""
+"""Module to publish processed analysis data to RabbitMQ or AWS SQS."""
 
 import json
+
 import boto3
 import pika
 from botocore.exceptions import BotoCoreError, NoCredentialsError
 
-from app.logger import setup_logger
 from app import config
+from app.logger import setup_logger
 
 # Initialize logger
 logger = setup_logger(__name__)

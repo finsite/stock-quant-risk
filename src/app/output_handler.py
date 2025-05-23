@@ -7,9 +7,9 @@ data to RabbitMQ or SQS, unless OUTPUT_MODE is set to 'log'.
 import json
 from typing import Any
 
+from app import config
 from app.logger import setup_logger
 from app.queue_sender import publish_to_queue
-from app import config
 
 # Initialize logger
 logger = setup_logger(__name__)
