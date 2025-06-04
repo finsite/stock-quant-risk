@@ -7,27 +7,15 @@ def setup_logger(name: str = "app") -> logging.Logger:
 
     If a logger with the same name already exists, it is reused.
     Otherwise, a new logger is created and configured to log to stdout
-    with the format:
-        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    using a plain or JSON format depending on LOG_FORMAT.
 
     The default log level is controlled via the LOG_LEVEL environment variable.
 
     Args:
-    ----
         name (str): The name of the logger. Defaults to "app".
 
-    :param name: str:  (Default value = "app")
-    :param name: str:  (Default value = "app")
-    :param name: str:  (Default value = "app")
-    :param name: Default value = "app")
-    :type name: str :
-    :param name: Default value = "app")
-    :type name: str :
-    :param name: str:  (Default value = "app")
-    :param name: str:  (Default value = "app")
-    :param name: str:  (Default value = "app")
-    :param name: str:  (Default value = "app")
-
+    Returns:
+        logging.Logger: The configured logger instance.
     """
     logger: logging.Logger = logging.getLogger(name)
 
